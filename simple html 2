@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Shopping Cart</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  .item { margin-bottom: 10px; }
+  #cart { margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<h2>Products</h2>
+<div class="item">
+  <span>Product 1</span>
+  <button onclick="addToCart('Product 1')">Add to Cart</button>
+</div>
+<div class="item">
+  <span>Product 2</span>
+  <button onclick="addToCart('Product 2')">Add to Cart</button>
+</div>
+
+<h2>Cart</h2>
+<div id="cart"></div>
+
+<script>
+// Check for saved cart data in local storage
+let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+
+// Function to add items to the cart
+function addToCart(item) {
+  cart.push(item);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  displayCart();
+}
+
+// Function to remove items from the cart
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  displayCart();
+}
+
+// Function to display the cart
+function displayCart() {
+  const cartEl = document.getElementById('cart');
+  cartEl.innerHTML = '';
+  cart.forEach((item, index) => {
+    cartEl.innerHTML += `<div>${item} <button onclick="removeFromCart(${index})">Remove</button></div>`;
+  });
+}
+
+// Initial display of the cart
