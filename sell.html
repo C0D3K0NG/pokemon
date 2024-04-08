@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>Chic-Cart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+   
+    <nav class="navbar">
+      <div class="logo_item">
+        <i class="bx bx-menu" id="sidebarOpen"></i>
+        <img src="images/logo.png" alt=""></i>
+      </div>
+
+      <div class="search_bar">
+        <input type="text" placeholder="Search" />
+      </div>
+
+      <div class="navbar_content">
+        <i class="bi bi-grid"></i>
+        <i class='bx bx-sun' id="darkLight"></i>
+        <i class='bx bx-bell' ></i>
+        <img src="images/profile.jpg" alt="" class="profile" />
+      </div>
+    </nav>
+
+    <nav class="sidebar">
+      <div class="menu_content">
+        <ul class="menu_items">
+          <div class="menu_title menu_dahsboard"></div>
+          <li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-home-alt"></i>
+              </span>
+              <span class="navlink">Home</span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+
+            <ul class="menu_items submenu">
+              <a href="sell.html" class="nav_link sublink">Sell</a>
+              <a href="item.html" class="nav_link sublink">Item Left</a>
+            
+            </ul>
+          </li>
+   
+        
+     
+      
+            
+   
+
+
+            
+            <div class="col-lg-4 mb-3">
+                <div class="balance status">
+                    <h5>Total items</h5>
+                    <h2><span id="current-balance">40</span></h2>
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="submit-area">
+                    <h4>Sell items</h4>
+                    <input id="deposit-amount" type="text" class="form-control" placeholder="10"><br>
+                    <button id="deposit-btn" class="btn btn-success">Sell</button>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="submit-area">
+                    <h4>Items left</h4>
+                    <input id="withdraw-amount" type="text" class="form-control" placeholder="30"><br>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
+        <div class="bottom_content">
+          <div class="bottom expand_sidebar">
+            <span> Expand</span>
+            <i class='bx bx-log-in' ></i>
+          </div>
+          <div class="bottom collapse_sidebar">
+            <span> Collapse</span>
+            <i class='bx bx-log-out'></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+   
+
+    <script src="script.js"></script>
+  </body>
+</html>
